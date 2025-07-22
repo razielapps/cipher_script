@@ -20,4 +20,26 @@ def encrypt(plain_text, shift_amount):
     print("The endcoded text is ",cipher_text)
 
     
-encrypt(plain_text=text,shift_amount=shift)
+
+
+
+# create a function called decrypt to to decrypt the text entered by the user
+
+def decrypt(cipher_text, shift_amount):
+    plain_text = ""
+    for letter in cipher_text:
+        position = alphabet.index(letter)
+        new_position = position - shift_amount
+        plain_text += alphabet[new_position]
+    print("The decoded message is",plain_text)
+
+
+if direction == "encode":
+    encrypt(plain_text=text,shift_amount=shift)
+elif direction == "decode":
+    decrypt(cipher_text=text,shift_amount=shift)
+else:
+    print("Please choose between 'encode' and 'decode'")
+    
+
+
