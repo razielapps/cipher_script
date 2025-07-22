@@ -40,6 +40,8 @@ elif direction == "decode":
     decrypt(cipher_text=text,shift_amount=shift)
 else:
     print("Please choose between 'encode' and 'decode'")
+
+    
     
 
 
